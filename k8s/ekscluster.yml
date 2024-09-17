@@ -1,0 +1,27 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mern
+  region: ap-south-1
+
+nodeGroups:
+  - name: worker-group
+    instanceType: t2.micro
+    desiredCapacity: 3       
+    minSize: 2                
+    maxSize: 4                
+    volumeSize: 8             
+
+
+# eksctl create nodegroup \
+#   --cluster mern \
+#   --name worker-group \
+#   --node-type t2.micro \
+#   --nodes 3 \               # Desired node count
+#   --nodes-min 2 \            # Minimum node count
+#   --nodes-max 4 \            # Maximum node count
+#   --node-volume-size 8 \     # Root volume size of 8 GB
+#   --region ap-south-1    
+
+# cmd:-   eksctl create cluster -f ekscluster.yaml
