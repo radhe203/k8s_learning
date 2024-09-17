@@ -30,6 +30,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo-service
+  namespace: two-tier
 spec:
   ports:
     - name: tcp
