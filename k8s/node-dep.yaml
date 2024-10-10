@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: node-backend
-          image: radhe2003/multi:03
+          image: radhe2003/multi:04
           ports:
             - containerPort: 3000
           env:
